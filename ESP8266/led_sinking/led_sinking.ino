@@ -1,6 +1,6 @@
 /*
-  ESP8266 build-in & E0 LED Sinking
   Two ways of connecting an LED - Sourcing & Sinking
+  In ESP8266 build-in & NodeMCU E0 LED are connected in Sinking
   
 	@g3jerrie
 */
