@@ -1,12 +1,12 @@
 /*
   Two ways of connecting an LED - Sourcing & Sinking
-  In ESP8266 build-in & NodeMCU E0 LED are connected in Sinking
+  In ESP8266 build-in & NodeMCU Onboard LED are connected in Sinking
   
 	@g3jerrie
 */
 
 // Define the pins for the LEDs
-//#define LED_BUILTIN_PIN LED_BUILTIN // ESP8266 inbuilt LED Sinking
+//#define LED_BUILTIN_PIN LED_BUILTIN // ESP8266 inbuilt LED Sinking, can also be accessed by D4 pin
 //#define LED_ONBOARD_PIN D0 // NodeMCU onboard LED Sinking 
 #define LED_EXTERNAL_SINKING_PIN D1 // connected external LED in Sinking
 #define LED_EXTERNAL_SOURCING_PIN D2 // connected external LED in Sourcing
