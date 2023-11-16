@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+
+# Declared variables with my creds here
+jIoTCreds.h
