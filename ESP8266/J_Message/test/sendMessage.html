@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Send Message to ThingSpeak</title>
+    <script>
+        function sendMessage() {
+            var messageInput = document.getElementById("message");
+            var message = messageInput.value;
+            var apiKey = "W6OC8K7QQYVVPQ6H"; // Replace with your ThingSpeak Write API Key
+            var url = "https://api.thingspeak.com/update?api_key=" + apiKey + "&field1=" + encodeURIComponent(message);
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", url, true);
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    alert("Message sent successfully!");
+                    messageInput.value = ""; // Clear the input field
+                } else {
+                    alert("Error sending message: " + xhr.status);
+                }
+            };
+            xhr.send();
+        }
+    </script>
+</head>
+<body>
+    <h1>Send Message to ThingSpeak</h1>
+    <input type="text" id="message" placeholder="Enter your message here">
+    <button onclick="sendMessage()">Send Message</button>
+</body>
+</html>
